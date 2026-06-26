@@ -56,13 +56,13 @@ export default function FeatureShowcase() {
   };
 
   return (
-    <section className="py-24 bg-white text-oceanic overflow-hidden relative">
+    <section className="py-24 bg-white dark:bg-nocturnal text-oceanic dark:text-arctic-powder overflow-hidden relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-16">
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl font-mono mb-4">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl font-mono mb-4 text-nocturnal dark:text-white">
             Intelligence at Scale
           </h2>
-          <p className="text-lg leading-8 text-oceanic/80 max-w-2xl">
+          <p className="text-lg leading-8 text-oceanic/80 dark:text-arctic-powder/70 max-w-2xl transition-colors duration-300">
             Our platform combines cutting-edge AI with robust data pipelines, delivering actionable insights faster than ever before.
           </p>
         </div>
@@ -77,9 +77,9 @@ export default function FeatureShowcase() {
             return (
               <div
                 key={index}
-                className={`group relative overflow-hidden rounded-3xl transition-all duration-200 ease-out border border-oceanic/10 cursor-pointer hover:-translate-y-2 hover:shadow-xl hover:border-oceanic/30 animate-entrance delay-${(index % 2 + 1) * 100} ${
+                className={`group relative overflow-hidden rounded-3xl transition-all duration-200 ease-out border border-oceanic/10 dark:border-arctic-powder/10 cursor-pointer hover:-translate-y-2 hover:shadow-xl hover:border-oceanic/30 dark:hover:border-arctic-powder/30 animate-entrance delay-${(index % 2 + 1) * 100} ${
                   isMobile ? "" : feature.colSpan
-                } ${feature.color}`}
+                } ${feature.color} ${feature.color.includes('bg-white') || feature.color.includes('bg-arctic-powder') ? 'dark:bg-oceanic dark:text-arctic-powder' : ''}`}
                 onMouseEnter={() => !isMobile && handleInteraction(index)}
                 onClick={() => isMobile && handleInteraction(index)}
               >

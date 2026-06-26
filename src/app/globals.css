@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -13,20 +14,19 @@
 }
 
 :root {
-  --background: #F1F6F4;
-  --foreground: #172B36;
+  --background: var(--color-arctic-powder);
+  --foreground: var(--color-oceanic);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #172B36;
-    --foreground: #F1F6F4;
-  }
+.dark {
+  --background: var(--color-oceanic);
+  --foreground: var(--color-arctic-powder);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Animations constraint: 150-200ms ease-out for hovers, 300-400ms ease-in-out for layout */

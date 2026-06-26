@@ -31,8 +31,24 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark')
+                } else {
+                  document.documentElement.classList.remove('dark')
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col font-sans bg-arctic-powder dark:bg-oceanic text-oceanic dark:text-arctic-powder transition-colors duration-300">{children}</body>
     </html>
   );
 }
