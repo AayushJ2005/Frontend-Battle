@@ -30,7 +30,7 @@ export default function HeroSection() {
           <a href="#pricing" className="w-full sm:w-auto px-8 py-4 bg-nocturnal dark:bg-forsythia text-arctic-powder dark:text-nocturnal font-bold rounded-xl shadow-lg shadow-nocturnal/20 dark:shadow-forsythia/20 hover:shadow-xl hover:bg-oceanic dark:hover:bg-deep-saffron transition-all hover:-translate-y-1">
             View Pricing
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-oceanic text-nocturnal dark:text-arctic-powder font-bold rounded-xl ring-1 ring-inset ring-oceanic/10 dark:ring-arctic-powder/10 hover:bg-mystic-mint/50 dark:hover:bg-nocturnal transition-all flex items-center justify-center gap-2">
+          <a href="https://github.com/AayushJ2005/Frontend-Battle" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-oceanic text-nocturnal dark:text-arctic-powder font-bold rounded-xl ring-1 ring-inset ring-oceanic/10 dark:ring-arctic-powder/10 hover:bg-mystic-mint/50 dark:hover:bg-nocturnal transition-all flex items-center justify-center gap-2">
             <img src="/assets/link.svg" alt="GitHub" className="w-5 h-5 opacity-70 dark:invert" />
             GitHub Repo
           </a>
